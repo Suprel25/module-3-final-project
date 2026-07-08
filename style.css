@@ -39,6 +39,7 @@ button{
     background-color: #6415ff;
     color: white;
     border: none;
+    cursor: pointer;
 }
 
 .container{
@@ -54,7 +55,6 @@ p{
     line-height: 1.5;
 }
 
-.nav__link--primary, 
 .values__button:hover{
     background-color: #5517d1;
     text-decoration: none;
@@ -101,33 +101,41 @@ nav{
 }
 
 .nav__link{
+    position: relative;
     margin: 0 16px;
-    padding: 8px;
     color: #243e63 ;
     font-weight: 600;
-    text-underline-offset: 6px;
 }
 
+.nav__link::after{
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: -2px;
+    width: 0;
+    height: 2px;
+    background: #6415ff;
+    transition: all 0.2s ease;
+}
 
-
-.nav__link:hover{
-    text-decoration:underline;
-    text-decoration-color: #6415ff ;
-    text-decoration-thickness: 2px;
+.nav__link:hover::after{
+    width: 100%;
+    left: 0;
 }
 
 .nav__link--primary{
     padding: 8px 24px;
     border-radius: 50px;
-    background-color: rgba(80, 17, 204);
+    background-color:#6415ff;
     color: white;
     border: none;
     transition: all 300ms ease;
+    text-decoration: none;
 }
 
-.nav__link--primary:hover{
-    text-decoration: none;
-    
+.nav__link--primary:hover::after{
+    display: none;
+    background-color:  #5517d1;
 }
 
 /* 
@@ -362,7 +370,12 @@ LEARN
     background-color: #6415ff;
     color: white;
     border: none;
+    transition: all 300ms ease;
+    cursor: pointer;
+}
 
+.learn__button:hover{
+    background-color:  #5517d1;
 }
 
 .learn__img--container{
@@ -687,7 +700,17 @@ PRICING
    background: linear-gradient(115deg, 
         #38b2ac 0%,
         #81e6d9 100%);
+    transition: all 300ms ease;    
 }
+
+.card__button--light-green:hover{
+    box-shadow:0px 20px 25px -5px rgba(0,0,0, 0.1) ;
+    transform: translate(1px, -1px)
+}
+
+
+
+
 
 .pricing-card__title--container--primary{
     background: linear-gradient(
@@ -743,6 +766,12 @@ PRICING
     font-weight: 600;
     background-color: #f7fafc;
     color: #6415ff;
+    transition: all 300ms ease;
+}
+
+.card__button--primary:hover{
+    box-shadow:0px 20px 25px -5px rgba(0,0,0, 0.1) ;
+    transform: translate(1px, -1px)
 }
 
 .solid__color--red{
@@ -867,6 +896,12 @@ TESTIMONOIAL
     height: 50px;
     border-radius: 50px;
     background-color:#edf2f7 ;
+    transition: all 300ms ease;
+    cursor: pointer;
+ }
+
+ .figure__container:hover{
+    background-color: #e1e6f0;
  }
 
  /* 
@@ -911,12 +946,23 @@ TESTIMONOIAL
     font-size: 16px;
     font-weight: 700;
     background-color:#f56565 ;
+    transition: all 300ms ease;
+ }
+
+ .start__button:hover{
+    background-color: rgba(229, 62, 62);
  }
 
  .start__button--blue{
    background-color: rgb(100, 21, 255) ;
    border: 1px solid ;
    margin-right: 32px;
+   transition: all 300ms ease;
+ }
+
+.start__button--blue:hover{
+    background-color: #f7fafc;
+    color: rgb(100, 21, 255)  ;
  }
  
  /* 
@@ -951,7 +997,26 @@ TESTIMONOIAL
 }
 
 .footer__link--link{
+    position: relative;
     color: #f7fafc ;
+}
+
+
+
+.footer__link--link::after{
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: -2px;
+    width: 0;
+    height: 2px;
+    background: white;
+    transition: all 0.2s ease;
+}
+
+.footer__link--link:hover::after{
+    width: 100%;
+    left: 0;
 }
 
 .footer__end--container{
@@ -999,6 +1064,20 @@ TESTIMONOIAL
     border-radius: 50%;
     background-color: #edf2f7;
     color: #243e63;
+    cursor: pointer;
+    transition: all 300ms ease;
+}
+
+.fa-facebook-f:hover{
+    background-color: #dee7f8;
+}
+
+.fa-twitter:hover{
+    background-color: #dee7f8;
+}
+
+.fa-youtube:hover{
+    background-color: #dee7f8;
 }
 
 
