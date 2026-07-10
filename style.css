@@ -139,6 +139,10 @@ nav{
 }
 
 .btn__menu{
+    position: absolute;
+    right: 20px;
+    top:45px;
+    padding: 8px;
     font-size: 20px;
     text-align: center;
     border: none;
@@ -273,7 +277,7 @@ input::placeholder{
 .landing__button{
     font-size: 16px;
     font-weight: 800;
-    padding: 16px 32px;
+    padding: 18px 34px;
     margin-bottom: 2px;
     margin-left: 32px;
     cursor: pointer;
@@ -1071,6 +1075,10 @@ TESTIMONOIAL
     background-color: rgb(100, 21, 255) ;
 }
 
+.footer__container{
+    margin: 0;
+}
+
 .footer__links--container{
     margin: 0 auto;
     display: flex;
@@ -1605,6 +1613,42 @@ TABLETS
     flex-direction: column;
     align-content: space-evenly;
    }
+}
+
+@media (max-width: 640px) {
+
+      /* 
+    
+    FEATURES
+
+    */
+
+    .features__description{
+        font-size: 36px;
+
+    }
+
+    .card{
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
+    
+    }
+
+    .card__title{
+        margin: 0;
+        text-align: center;
+    }
+
+    .card__para{
+        margin: 0;
+        width: 100%;
+        max-width: 350px;
+        text-align: center;
+        
+    }
+
+    
 }
 
 @media (max-width: 480px) {
